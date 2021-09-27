@@ -199,8 +199,38 @@ namespace task1
 
         static void Main(string[] args)
         {
-            Rectangle d = new Rectangle(0, 0, 4, 4);
-            d.Print();
+            Console.WriteLine("------------------Here is comes Rectangle----------------------");
+            Rectangle r = new Rectangle(0, 0, 4, 4);
+            r.Print();
+            r.Scaling(2);
+            r.Print();
+            r.Move(0, 3);
+            r.Print();
+            Console.WriteLine("------------------Here is comes Triangle----------------------");
+            Triangle t = new Triangle(1, 2, 4, 4, 3, 2);
+            t.Print();
+            t.Scaling(2);
+            t.Print();
+            t.Move(0, 3);
+            t.Print();
+            Console.WriteLine("------------------Here is comes Triangle----------------------");
+            Circle c = new Circle(4);
+            c.Print();
+            c.Scaling(2);
+            c.Print();
+            c.Move(0, 3);
+            c.Print();
+            Console.WriteLine("------------------Here is comes Representation----------------------");
+            Representation rep = new Representation(2, 2, 4, 6);
+            rep.Print();
+            rep.AddShape(r);
+            rep.AddShape(t);
+            rep.AddShape(c);
+            rep.Print();
+            rep.Scaling(2);
+            rep.Print();
+            rep.Move(0, 3);
+            rep.Print();
         }
     }
 }
